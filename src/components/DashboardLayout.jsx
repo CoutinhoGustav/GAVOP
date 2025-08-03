@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../css/DashboardLayout.css"; // Importando o CSS externo
+import "./DashboardLayout.css"; // Importando o CSS externo
 
 function DashboardLayout({ children }) {
   const navigate = useNavigate();
