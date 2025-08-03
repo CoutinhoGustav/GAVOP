@@ -1,14 +1,26 @@
+// src/components/CardAeronave.jsx
 import React from "react";
 import { Card } from "react-bootstrap";
-import "../css/CardAeronave.css";
+import { useNavigate } from "react-router-dom";
 
 function CardAeronave({ aeronave }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/aeronaves/detalhes/${aeronave.id}`);
+  };
+
   return (
-    <Card className="voo-card">
+    <Card
+      onClick={handleClick}
+      style={{ width: "18rem", cursor: "pointer" }}
+      className="shadow"
+    >
       <Card.Body>
-        <Card.Title className="voo-title">{aeronave.modelo}</Card.Title>
-        <Card.Text className="voo-hora">Matrícula: {aeronave.matricula}</Card.Text>
-        <button className="btn btn-primary">Ver Detalhes</button>
+        <Card.Title>{aeronave.modelo}</Card.Title>
+        <Card.Text>
+          Matrícula: <strong>{aeronave.matricula}</strong>
+        </Card.Text>
       </Card.Body>
     </Card>
   );

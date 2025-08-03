@@ -1,24 +1,22 @@
+// src/components/CardVoo.jsx
 import React from "react";
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "../css/CardVoo.css";
-
+import { useNavigate } from "react-router-dom";
 
 function CardVoo({ voo }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/voos/${voo.id}`);
+  };
+
   return (
-    <Link to={`/aeronaves/${voo.id}`} className="voo-card-link">
-      <Card className="voo-card mb-3">
-        <Card.Body>
-          <Card.Title className="voo-title">Data: {voo.id}</Card.Title>
-          <Card.Text className="voo-local">
-            <strong>Local:</strong> {voo.local}
-          </Card.Text>
-          <Card.Text className="voo-hora">
-            <strong>Hora:</strong> {voo.hora}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Link>
+    <Card onClick={handleClick} style={{ width: "18rem", cursor: "pointer" }} className="shadow">
+      <Card.Body>
+        <Card.Title>{voo.local}</Card.Title>
+        <Card.Text>Hora: {voo.hora}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 }
 
