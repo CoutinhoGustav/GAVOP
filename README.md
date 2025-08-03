@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Projeto GAVOP - Painel de Aeronaves e Ocorrências
+
+Este é um sistema web desenvolvido em React.js utilizando React Router para navegação e React Bootstrap para estilização dos componentes. Ele permite visualizar aeronaves, voos e ocorrências em um layout responsivo com um menu estilo de sidebar e nas telas com cards informativos.
+
+## Tecnologias Utilizadas
+
+* [React]
+* [React Router DOM]
+* [React Bootstrap]
+* [Bootstrap 5]
+
+---
+
+## Instalação e Execução
+
+1. **Clone o repositório:**
+
+```terminal bash
+git clone https://github.com/CoutinhoGustav/GAVOP.git
+cd gavop
+```
+
+2.  **Instale as dependências:**
+
+```bash
+npm install
+```
+
+---
+
+3.  **Após a instalação, execute o Projeto:**
+
+Para rodar o projeto em modo de desenvolvimento:
+
+```bash
+npm start
+```
+
+Acesse link no terminal: [http://localhost:3000] ou (http://localhost:3000)
+
+---
+
+## 📁 Estrutura de Pastas
+
+```
+gavop/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── CardAeronave.jsx
+│   │   ├── CardVoo.jsx
+│   │   ├── CardVoo.css
+│   │   └── DashboardLayout.jsx
+│   ├── css/
+│   │   └── DashboardLayout.css
+│   ├── pages/
+│   │   ├── AeronaveDetalhes.jsx
+│   │   ├── Aeronaves.jsx
+│   │   ├── ConsultaOcorrencia.jsx
+│   │   ├── Home.jsx
+│   │   ├── Ocorrencias.jsx
+│   │   ├── Perfil.jsx
+│   │   └── Voos.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── index.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
+
+---
+
+## 💡 Scripts Disponíveis
+
+* `npm start` – Inicia o servidor de desenvolvimento.
+* `npm run build` – Compila o projeto para produção.
+* `npm test` – Executa os testes (se aplicável).
+* `npm run eject` – Expõe as configurações do Webpack e Babel (não reversível).
+
+---
+
+## 🪰 Dependências
+
+Se houver erro de módulo não encontrado, execute:
+
+```bash
+npm install react-router-dom react-bootstrap bootstrap
+```
+
+No arquivo `index.js`, adicione:
+
+```js
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+---
+
+##  Funcionalidades
+
+[x] Layout com sidebar
+[x] Cards de Aeronaves e Ocorrências
+[x] Navegação com React Router
+[ ] Integração com backend
+[ ] Autenticação de usuário
 
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
