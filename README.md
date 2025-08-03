@@ -44,7 +44,7 @@ npm start
 
 Acesse no navegador:
 
-👉 [http://localhost:3000] ou (http://localhost:3000)
+[http://localhost:3000]
 
 ---
 
