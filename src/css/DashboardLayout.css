@@ -1,0 +1,38 @@
+/* Botão do menu (hambúrguer) */
+.menu-toggle-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1050;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #00468c;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: rgb(0, 70, 140);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+  position: absolute;
+  z-index: 1040;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Content area (para manter margem lateral quando sidebar estiver oculta em telas menores) */
+.content {
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+}
