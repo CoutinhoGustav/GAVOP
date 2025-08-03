@@ -2,12 +2,22 @@
 
 Este é um sistema web desenvolvido em React.js utilizando React Router para navegação e React Bootstrap para estilização dos componentes. Ele permite visualizar aeronaves, voos e ocorrências em um layout responsivo com um menu estilo de sidebar e nas telas com cards informativos.
 
-## Tecnologias Utilizadas
+---
 
-* [React]
-* [React Router DOM]
-* [React Bootstrap]
-* [Bootstrap 5]
+## Pré-requisitos
+
+Antes de iniciar, verifique se você tem o Node.js e o npm instalados:
+
+```bash
+node -v
+npm -v
+```
+
+Senão estiver instalado, baixe e instale o Node.js (que já inclui o npm) no site oficial:
+
+https://nodejs.org/
+
+Após a instalação, reinicie o terminal e verifique novamente as versões.
 
 ---
 
@@ -15,32 +25,30 @@ Este é um sistema web desenvolvido em React.js utilizando React Router para nav
 
 1. **Clone o repositório:**
 
-```terminal bash
+```bash
 git clone https://github.com/CoutinhoGustav/GAVOP.git
 cd gavop
 ```
 
-2.  **Instale as dependências:**
+2. **Instale as dependências:**
 
-```bash
+```bash ou cmd
 npm install
 ```
 
----
+3. **Inicie o projeto em modo de desenvolvimento:**
 
-3.  **Após a instalação, execute o Projeto:**
-
-Para rodar o projeto em modo de desenvolvimento:
-
-```bash
+```bash ou cmd
 npm start
 ```
 
-Acesse link no terminal: [http://localhost:3000] ou (http://localhost:3000)
+Acesse no navegador:
+
+👉 [http://localhost:3000] ou (http://localhost:3000)
 
 ---
 
-## 📁 Estrutura de Pastas
+##  Estrutura de Pastas:
 
 ```
 gavop/
@@ -74,24 +82,26 @@ gavop/
 
 ---
 
-## 💡 Scripts Disponíveis
+## Scripts Disponíveis:
 
-* `npm start` – Inicia o servidor de desenvolvimento.
-* `npm run build` – Compila o projeto para produção.
-* `npm test` – Executa os testes (se aplicável).
-* `npm run eject` – Expõe as configurações do Webpack e Babel (não reversível).
+Comandos             
+
+| `npm start`- Inicia o servidor de desenvolvimento.
+| `npm run build`- Compila o projeto para produção.
+| `npm test`- Executa os testes (se aplicável).        
+| `npm run eject`- Exibe configurações ocultas do React.
 
 ---
 
-## 🪰 Dependências
+##  Dependências:
 
-Se houver erro de módulo não encontrado, execute:
+Se algum erro de módulo aparecer, instale manualmente com:
 
 ```bash
 npm install react-router-dom react-bootstrap bootstrap
 ```
 
-No arquivo `index.js`, adicione:
+No arquivo `index.js`, certifique-se de importar:
 
 ```js
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -99,12 +109,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ---
 
-##  Funcionalidades
+##  Funcionalidades:
 
-[x] Layout com sidebar
-[x] Cards de Aeronaves e Ocorrências
-[x] Navegação com React Router
-[ ] Integração com backend
-[ ] Autenticação de usuário
-
-
+- [x] Layout com sidebar  
+- [x] Cards de Aeronaves e Ocorrências  
+- [x] Navegação com React Router  
+- [ ] Integração com backend  
+- [ ] Autenticação de usuário
