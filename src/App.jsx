@@ -6,6 +6,7 @@ import Voos from "./pages/Voos";
 import Aeronaves from "./pages/Aeronaves";
 import Ocorrencias from "./pages/Ocorrencias";
 import Home from "./pages/Home";
+import  Consulta from "./pages/Consulta";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/aeronaves/voos" element={<Voos />} />
           <Route path="/aeronaves/aeronaves" element={<Aeronaves />} />
           <Route path="/ocorrencias" element={<Ocorrencias />} />
+          <Route  path="/consulta" element={<Consulta />} />
         </Routes>
       </DashboardLayout>
     </Router>
