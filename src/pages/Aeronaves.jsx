@@ -1,5 +1,6 @@
 import React from "react";
 import CardAeronave from "../components/CardAeronave";
+import "../css/Aeronaves.css";
 
 const aeronaves = [
   { id: 1, modelo: "PR-DHL (RESGATE 04)", matricula: "EC130B4" },
@@ -10,7 +11,7 @@ const aeronaves = [
 function Aeronaves() {
   return (
     <div>
-      <h2>Lista de Aeronaves</h2>
+      <h2>Aeronaves</h2>
       <div className="d-flex flex-wrap gap-3">
         {aeronaves.map((aero) => (
           <CardAeronave key={aero.id} aeronave={aero} />

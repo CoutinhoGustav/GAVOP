@@ -1,6 +1,7 @@
 import React from "react";
 import CardVoo from "../components/CardVoo";
 
+
 const voosDoDia = [
   { data: "01/08/2025", local: "SBBR", aeronave: "PS-BDF", hora: "08:00" },
   { data: "01/08/2025", local: "BR-040", aeronave: "PR-DHL", hora: "10:30" },
