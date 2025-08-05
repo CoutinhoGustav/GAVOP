@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../css/Perfil.css';
 
 // Modal separado (pode ser extraído para outro arquivo futuramente)
@@ -26,7 +25,6 @@ const Modal = ({ titulo, mensagem, onConfirm, onCancel }) => (
 );
 
 const Perfil = () => {
-  const navigate = useNavigate();
 
   const defaultUser = {
     nome: 'João da Silva',
