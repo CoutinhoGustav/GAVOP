@@ -7,7 +7,7 @@ function Home() {
       id: 1,
       titulo: "Treinamento de Resgate",
       descricao: "Novo treinamento de resgate será realizado no dia 15/08 no hangar central.",
-      data: "05/08/2025",
+      data: "05/07/2025",
     },
     {
       id: 2,
