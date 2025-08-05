@@ -6,32 +6,47 @@ function Consulta() {
   const [ocorrencias] = useState([
     {
       id: 1,
-      data: "2025-08-01",
-      natureza: "Pane elétrica",
-      aeronave: "A320",
+      data: "01/08/2025",
+      natureza: "PCR",
+      aeronave: "PR-DHL",
       tripulantes: {
-        comandante: "João",
-        copiloto: "Maria",
-        medico: "Carlos",
-        enfermeiro: "Ana",
-        top3: "João",
-        top2: "Carlos",
-        top1: "Ana",
+        comandante: "HSM",
+        copiloto: "DAN",
+        medico: "LAR",
+        enfermeiro: "INA",
+        top3: "",
+        top2: "",
+        top1: "",
       },
     },
     {
       id: 2,
-      data: "2025-08-02",
-      natureza: "Falha no motor",
-      aeronave: "B737",
+      data: "15/08/2025",
+      natureza: "Treinamento",
+      aeronave: "PR-CBM",
       tripulantes: {
-        comandante: "Paulo",
-        copiloto: "Fernanda",
+        comandante: "POR",
+        copiloto: "ALA",
         medico: "",
-        enfermeiro: "Lucas",
-        top3: "Lucas",
-        top2: "Paulo",
-        top1: "Fernanda",
+        enfermeiro: "",
+        top3: "HSJ",
+        top2: "",
+        top1: "",
+      },
+    },
+    {
+      id: 3,
+      data: "15/12/2023",
+      natureza: "Afogamento",
+      aeronave: "PS-BDF",
+      tripulantes: {
+        comandante: "ALA",
+        copiloto: "HSM",
+        medico: "PSN",
+        enfermeiro: "",
+        top3: "HSJ",
+        top2: "CMO",
+        top1: "KRN",
       },
     },
   ]);
@@ -57,8 +72,16 @@ function Consulta() {
     }));
   };
 
+  // Função para converter data do formato DD/MM/YYYY para YYYY-MM-DD
+  const formatarData = (dataStr) => {
+    const [dia, mes, ano] = dataStr.split("/");
+    return `${ano}-${mes.padStart(2, "0")}-${dia.padStart(2, "0")}`;
+  };
+
   const ocorrenciasFiltradas = ocorrencias.filter((o) => {
-    const matchData = filtro.data ? o.data.includes(filtro.data) : true;
+    const matchData = filtro.data
+      ? formatarData(o.data) === filtro.data
+      : true;
     const matchNatureza = filtro.natureza
       ? o.natureza.toLowerCase().includes(filtro.natureza.toLowerCase())
       : true;
@@ -149,7 +172,6 @@ function Consulta() {
           />
         </Form.Group>
 
-        
         <Form.Group className="mb-2">
           <Form.Label>Copiloto</Form.Label>
           <Form.Control
@@ -217,46 +239,48 @@ function Consulta() {
         </Form.Group>
       </Form>
 
-      <Table striped bordered hover responsive>
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Natureza</th>
-            <th>Aeronave</th> {/* 🛠️ Adicionada a coluna faltante */}
-            <th>Comandante</th>
-            <th>Copiloto</th>
-            <th>Médico</th>
-            <th>Enfermeiro</th>
-            <th>Top 3</th>
-            <th>Top 2</th>
-            <th>Top 1</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ocorrenciasFiltradas.length > 0 ? (
-            ocorrenciasFiltradas.map((o) => (
-              <tr key={o.id}>
-                <td>{o.data}</td>
-                <td>{o.natureza}</td>
-                <td>{o.aeronave}</td> {/* 🛠️ Aqui também */}
-                <td>{o.tripulantes.comandante}</td>
-                <td>{o.tripulantes.copiloto}</td>
-                <td>{o.tripulantes.medico || "-"}</td>
-                <td>{o.tripulantes.enfermeiro || "-"}</td>
-                <td>{o.tripulantes.top3 || "-"}</td>
-                <td>{o.tripulantes.top2 || "-"}</td>
-                <td>{o.tripulantes.top1 || "-"}</td>
-              </tr>
-            ))
-          ) : (
+      <div className="tabela-scroll-container">
+        <Table striped bordered hover responsive>
+          <thead>
             <tr>
-              <td colSpan="10" style={{ textAlign: "center" }}>
-                Nenhuma ocorrência encontrada.
-              </td>
+              <th>Data</th>
+              <th>Natureza</th>
+              <th>Aeronave</th>
+              <th>Comandante</th>
+              <th>Copiloto</th>
+              <th>Médico</th>
+              <th>Enfermeiro</th>
+              <th>Top 3</th>
+              <th>Top 2</th>
+              <th>Top 1</th>
             </tr>
-          )}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {ocorrenciasFiltradas.length > 0 ? (
+              ocorrenciasFiltradas.map((o) => (
+                <tr key={o.id}>
+                  <td>{o.data}</td>
+                  <td>{o.natureza}</td>
+                  <td>{o.aeronave}</td>
+                  <td>{o.tripulantes.comandante}</td>
+                  <td>{o.tripulantes.copiloto}</td>
+                  <td>{o.tripulantes.medico || "-"}</td>
+                  <td>{o.tripulantes.enfermeiro || "-"}</td>
+                  <td>{o.tripulantes.top3 || "-"}</td>
+                  <td>{o.tripulantes.top2 || "-"}</td>
+                  <td>{o.tripulantes.top1 || "-"}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="10" style={{ textAlign: "center" }}>
+                  Nenhuma ocorrência encontrada.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 }

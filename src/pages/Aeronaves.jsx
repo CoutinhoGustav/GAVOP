@@ -2,8 +2,9 @@ import React from "react";
 import CardAeronave from "../components/CardAeronave";
 
 const aeronaves = [
-  { id: 1, modelo: "C-130 Hercules", matricula: "FAB-001" },
-  { id: 2, modelo: "KC-390", matricula: "FAB-002" },
+  { id: 1, modelo: "PR-DHL (RESGATE 04)", matricula: "EC130B4" },
+  { id: 2, modelo: "PR-CBM (RESGATE 03)", matricula: "EC135T2" },
+  { id: 3, modelo: "PS-BDF (RESGATE 08)", matricula: "H125"  },
 ];
 
 function Aeronaves() {

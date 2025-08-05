@@ -4,7 +4,6 @@ body {
 }
 
 
-
 form {
   background-color: #ffffff;
   padding: 20px;
@@ -14,6 +13,7 @@ form {
 }
 
 form label {
+  width: 100%;
   font-weight: bold;
   color: #495057;
 }

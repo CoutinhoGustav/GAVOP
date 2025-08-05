@@ -2,8 +2,9 @@ import React from "react";
 import CardVoo from "../components/CardVoo";
 
 const voosDoDia = [
-  { id: 1, destino: "Brasília", hora: "08:00" },
-  { id: 2, destino: "São Paulo", hora: "10:30" },
+  { id: 1, local: "SBBR", aeronave: "PS-BDF", hora: "08:00" },
+  { id: 2, local: "BR-040", aeronave: "PR-DHL", hora: "10:30" },
+  { id: 3, local: "HMIB", aeronave: "PR-CBM", hora: "16:15" },
 ];
 
 function Voos() {

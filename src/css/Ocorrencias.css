@@ -1,0 +1,29 @@
+
+.oc-modal-wrapper {
+  position: relative;
+}
+
+.oc-modal-content {
+  padding: 1rem;
+}
+
+.oc-modal-title {
+  font-weight: bold;
+  color: #fefefe !important;
+}
+
+.oc-form-wrapper {
+  padding: 0.5rem 1rem;
+}
+
+.oc-form-section {
+    font-weight: bold;
+  margin-bottom: 2.75rem;
+}
+
+
+
+.oc-footer {
+  display: flex;
+  justify-content: space-between;
+}

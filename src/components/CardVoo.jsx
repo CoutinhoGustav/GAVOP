@@ -5,8 +5,9 @@ function CardVoo({ voo }) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>Voo #{voo.id}</Card.Title>
-        <Card.Text>Destino: {voo.destino}</Card.Text>
+        <Card.Title>Data:{voo.id}</Card.Title>
+        <Card.Text>Local: {voo.local}</Card.Text>
+        <Card.Text>Aeronave: {voo.aeronave}</Card.Text>
         <Card.Text>Hora: {voo.hora}</Card.Text>
       </Card.Body>
     </Card>
