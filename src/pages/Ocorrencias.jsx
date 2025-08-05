@@ -116,7 +116,7 @@ function Ocorrencias() {
               </div>
             </Modal.Body>
 
-            <Modal.Footer className="oc-footer">
+            <Modal.Footer className="oc-modal-footer">
               <Button variant="primary" onClick={handleSalvar}>
                 Salvar
               </Button>

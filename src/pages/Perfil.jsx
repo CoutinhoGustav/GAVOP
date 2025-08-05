@@ -5,12 +5,12 @@ import '../css/Perfil.css';
 // Modal separado (pode ser extraído para outro arquivo futuramente)
 const Modal = ({ titulo, mensagem, onConfirm, onCancel }) => (
   <div
-    className="modal-backdrop"
+    className="modal-perfil-backdrop"
     role="dialog"
     aria-modal="true"
     aria-labelledby="modal-title"
   >
-    <div className="modal-content">
+    <div className="modal-perfil-content">
       <h3 id="modal-title">{titulo}</h3>
       <p>{mensagem}</p>
       <div className="modal-buttons">
