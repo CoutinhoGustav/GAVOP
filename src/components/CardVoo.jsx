@@ -5,7 +5,7 @@ function CardVoo({ voo }) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>Data:{voo.id}</Card.Title>
+        <Card.Title>Data:{voo.data}</Card.Title>
         <Card.Text>Local: {voo.local}</Card.Text>
         <Card.Text>Aeronave: {voo.aeronave}</Card.Text>
         <Card.Text>Hora: {voo.hora}</Card.Text>

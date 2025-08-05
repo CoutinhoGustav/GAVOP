@@ -1,29 +1,43 @@
 
+
+
+
 .oc-modal-wrapper {
-  position: relative;
+  padding: 1rem;
 }
 
 .oc-modal-content {
   padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 
 .oc-modal-title {
   font-weight: bold;
-  color: #fefefe !important;
+  color: #003366;
 }
 
 .oc-form-wrapper {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
 }
 
 .oc-form-section {
-    font-weight: bold;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.5rem;
 }
 
-
+.oc-form-section .form-label {
+  font-weight: 500;
+  color: #333;
+}
 
 .oc-footer {
   display: flex;
   justify-content: space-between;
+}
+
+/* Confirmação Modal */
+.modal-title {
+  color: #003366;
 }
